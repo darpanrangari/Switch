@@ -5,12 +5,11 @@ Certainly, here's a script you can use as a guide while recording your demo pres
 **Title**: Managing Indicators Webpage Demo
 
 **Introduction**:
-- Begin with a brief introduction: "Hello, everyone! My name is Darpan, and I'm a software engineer. Today, I'm excited to demonstrate the 'Manage Indicator' webpage that I've developed."
+- Begin with a brief introduction: "Hello, everyone! My name is Darpan, I'm a engineer in the Emeralds teams. Today, I'm going to demonstrate the 'Manage Indicator' screen which we have developed in this spring"
 
 **Webpage Overview**:
 - This webpage is designed to help our users manage indicators on customer accounts efficiently
-- he page consists of two sections - the 'Active Indicator' section and the 'Inactive Indicator' section.
-- indicators are categorized as active and inactive: "We display active indicators in the 'Active Indicator' section and inactive ones in the 'Inactive Indicator' section."
+- Indicators are categorized as active and inactive: "We display active indicators in the 'Active Indicator' section and inactive ones in the 'Inactive Indicator' section."
 
 **User Interaction**:
 - coming to interacting with the page: "Users, including colleagues with accredited roles, can change the status of indicators on customer accounts."
