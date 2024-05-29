@@ -1,74 +1,124 @@
-
-
 ### React
 1. **Lifecycle Methods and Flow**
-   - Can you explain the lifecycle methods in React and their typical use cases?
-   - How do you decide when to use `componentDidMount` versus `componentDidUpdate`?
+   - Can you describe the React component lifecycle and explain the purpose of each lifecycle method?
+   - How would you use the `componentDidMount` lifecycle method in a class component?
+   - What are the differences between `shouldComponentUpdate` and `componentDidUpdate`?
+   - How do you manage side effects in functional components using hooks?
+   - Can you provide an example where `componentWillUnmount` is useful?
 
 2. **Styled Components**
-   - What are the benefits of using Styled Components in React?
-   - How do you handle global styles when using Styled Components?
+   - What are Styled Components and how do they differ from traditional CSS?
+   - How can you create a theme using Styled Components?
+   - Explain how to use props to dynamically change styles in Styled Components.
+   - What are some advantages and disadvantages of using Styled Components?
+   - Can you show an example of nesting styles using Styled Components?
 
 3. **Hooks**
-   - How do you manage state in a functional component using hooks?
-   - Can you give an example of using the `useEffect` hook for a specific scenario?
+   - What are React hooks and why were they introduced?
+   - How does the `useState` hook work? Provide an example.
+   - Explain the `useEffect` hook and its common use cases.
+   - What is the difference between `useMemo` and `useCallback`?
+   - How do you create a custom hook? Provide a use case for it.
 
 4. **Accessibility**
    - Why is accessibility important in web development?
-   - How do you ensure your React applications are accessible?
+   - What tools or techniques do you use to test accessibility in React applications?
+   - How do you implement ARIA roles and attributes in a React component?
+   - Can you provide an example of making a form accessible?
+   - How do you handle keyboard navigation in a React application?
 
 5. **Performance Optimization**
-   - What techniques do you use to optimize the performance of a React application?
-   - Can you provide an example of a performance bottleneck you encountered and how you resolved it?
+   - What are some common performance issues in React applications and how do you address them?
+   - How do you use React's `memo` function to optimize performance?
+   - What is code splitting and how does it improve performance in a React application?
+   - Explain the concept of virtualization in React and when you would use it.
+   - How can you optimize re-renders in a React component?
 
 ### Redux
 1. **Redux Saga**
-   - What is Redux Saga and how does it differ from Redux Thunk?
-   - Can you walk us through a basic example of a Redux Saga for handling asynchronous actions?
+   - What is Redux Saga and how does it help in managing side effects?
+   - How do you set up a simple Redux Saga to handle an API call?
+   - What are the differences between `takeEvery` and `takeLatest` in Redux Saga?
+   - How do you test a Redux Saga?
+   - Can you provide an example of using `put` and `call` effects in a Redux Saga?
 
 2. **Store Setup**
-   - How do you configure a Redux store in a new React project?
-   - What are some best practices for structuring Redux state in a large application?
+   - How do you configure a Redux store in a new React application?
+   - What are the roles of `createStore`, `combineReducers`, and `applyMiddleware` in Redux?
+   - How do you integrate Redux DevTools in a Redux setup?
+   - Explain the concept of middleware in Redux and provide an example of custom middleware.
+   - How do you persist Redux state across page reloads?
 
 3. **Reducers and Actions**
-   - How do you organize your reducers and actions in a Redux application?
-   - Can you explain the role of middleware in Redux and provide an example?
+   - How do you structure your actions and reducers in a large Redux application?
+   - What is the purpose of action creators in Redux?
+   - How do you handle asynchronous actions in Redux?
+   - Explain how you would manage state normalization in Redux.
+   - How do you test Redux actions and reducers?
 
 ### JavaScript/TypeScript (JS/TS)
 1. **Prototype Inheritance**
    - Can you explain how prototype inheritance works in JavaScript?
-   - What are symbols and how do they relate to object properties?
+   - How do you create an object that inherits from another object in JavaScript?
+   - What are the differences between classical inheritance and prototypal inheritance?
+   - How do you use the `Object.create` method?
+   - Can you provide an example of using symbols in JavaScript?
 
 2. **Array Methods**
-   - How do `map`, `filter`, and `reduce` work, and can you provide examples of when to use each?
-   - What's the difference between `slice` and `splice`?
+   - How do `map`, `filter`, and `reduce` methods work in JavaScript? Provide examples for each.
+   - What are the differences between `slice` and `splice` methods?
+   - How does the `concat` method work and when would you use it?
+   - How do you use the `find` and `findIndex` methods?
+   - Explain how the `every` and `some` methods work and provide use cases.
 
 3. **Call/Apply**
-   - How do the `call` and `apply` methods work in JavaScript? Can you provide examples?
+   - How do the `call` and `apply` methods differ? Provide examples.
+   - What are some scenarios where using `call` or `apply` would be beneficial?
+   - How do you use the `bind` method in JavaScript?
+   - Explain the concept of function borrowing with `call` and `apply`.
+   - Can you demonstrate how to use `call` and `apply` with variadic functions?
 
 4. **This Object and Scope**
-   - Can you explain the concept of `this` in JavaScript and how it differs in various contexts?
-   - How do arrow functions affect the scope of `this`?
+   - How does the `this` keyword work in JavaScript and how is it determined?
+   - What are the differences between the `this` keyword in arrow functions versus regular functions?
+   - How do you use `bind` to set the value of `this` in a function?
+   - Can you provide an example of scope chaining in JavaScript?
+   - Explain the concept of closures and how they relate to scope.
 
 5. **Async Operations**
-   - How do you handle asynchronous operations in JavaScript? Compare callbacks, promises, and async/await.
-   - Can you provide an example of using `async/await` for an API call?
+   - What are the differences between callbacks, promises, and async/await in handling asynchronous operations?
+   - How do you handle errors in asynchronous code with promises and async/await?
+   - Can you demonstrate how to chain promises in JavaScript?
+   - How do you use `Promise.all` and what are its use cases?
+   - Explain how you would handle asynchronous operations in a React component.
 
 6. **Security**
    - What are CSRF and XSS attacks, and how can they be prevented in web applications?
-   - Can you discuss a Common Vulnerabilities and Exposures (CVE) you've encountered and how it was resolved?
+   - How do you handle security vulnerabilities in JavaScript applications?
+   - What is CORS and how do you implement it?
+   - Can you explain the difference between `null` and `undefined`?
+   - What are some common security practices you follow when developing web applications?
 
 ### HTML/CSS
 1. **Flexbox and Grid Layouts**
-   - Can you explain the differences between Flexbox and Grid in CSS and when you would use each?
-   - Provide an example of a layout you created using Flexbox.
+   - Can you explain the difference between Flexbox and Grid in CSS and provide examples of when to use each?
+   - How do you create a responsive layout using Flexbox?
+   - Can you provide an example of a complex layout using CSS Grid?
+   - What are some common issues you face when using Flexbox and how do you resolve them?
+   - How do you handle browser compatibility when using Flexbox and Grid?
 
 2. **Box Model and Box Sizing**
-   - How does the box model work in CSS?
-   - What is the difference between `content-box` and `border-box` for box-sizing?
+   - What is the CSS box model and how does it affect layout?
+   - How does the `box-sizing` property work and what are the differences between `content-box` and `border-box`?
+   - Can you provide an example of using the box model to create a specific layout?
+   - How do margins, padding, and borders affect the size and position of elements in the box model?
+   - What are some common issues related to the box model and how do you troubleshoot them?
 
 3. **CSS Preprocessors**
    - What are the benefits of using CSS preprocessors like LESS or SASS?
-   - Can you provide an example of a project where you used a CSS preprocessor?
+   - How do you set up a project to use a CSS preprocessor?
+   - Can you provide examples of using variables and mixins in SASS?
+   - How do you manage and organize large CSS files using preprocessors?
+   - What are some common features of CSS preprocessors that you find most useful?
 
-These questions are designed to assess a candidate's understanding and practical knowledge of key concepts related to React, Redux, JavaScript/TypeScript, and HTML/CSS as noted in the provided documents.
+These questions should help in evaluating the candidate's knowledge and expertise in the respective areas.
