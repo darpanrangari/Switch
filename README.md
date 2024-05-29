@@ -1,42 +1,74 @@
-Subject: Feedback Request - Recent Contributions
 
-Hi Team,
 
-I hope you're doing well. I'm reaching out to ask for your feedback on my recent work for the Savings Solve project. Your thoughts are valuable to me, and I'd appreciate your input. Here are some specific points I'd love to hear your thoughts on:
+### React
+1. **Lifecycle Methods and Flow**
+   - Can you explain the lifecycle methods in React and their typical use cases?
+   - How do you decide when to use `componentDidMount` versus `componentDidUpdate`?
 
-Jaswant (Quality Engineer):
+2. **Styled Components**
+   - What are the benefits of using Styled Components in React?
+   - How do you handle global styles when using Styled Components?
 
-How did you find the quality and reliability of the features I developed?
-Did my work meet the testing standards effectively?
-Any suggestions for improving our collaboration in future projects?
-Encarni (Back End Engineer):
+3. **Hooks**
+   - How do you manage state in a functional component using hooks?
+   - Can you give an example of using the `useEffect` hook for a specific scenario?
 
-How was the integration experience with the front end features I worked on?
-Did my communication help in resolving the MCA URL launch issue efficiently?
-Any ideas for streamlining our collaboration further?
-Anisha (Business Analyst):
+4. **Accessibility**
+   - Why is accessibility important in web development?
+   - How do you ensure your React applications are accessible?
 
-Did my implementations align well with the initial requirements you provided?
-Were there any areas where my understanding of user needs could be improved?
-Any suggestions for better alignment between development and requirements gathering?
-Edward (Product Owner):
+5. **Performance Optimization**
+   - What techniques do you use to optimize the performance of a React application?
+   - Can you provide an example of a performance bottleneck you encountered and how you resolved it?
 
-Did my contributions align with the overall vision and goals of the product?
-Were the features I worked on prioritized effectively from a product perspective?
-Any insights on how we can better align our efforts in future iterations?
-Julian (Line Manager):
+### Redux
+1. **Redux Saga**
+   - What is Redux Saga and how does it differ from Redux Thunk?
+   - Can you walk us through a basic example of a Redux Saga for handling asynchronous actions?
 
-How did you find my performance during challenging periods, like the holiday season?
-Did I effectively manage my responsibilities and meet deadlines?
-Any areas where you see potential for growth or improvement?
-Additionally, I would appreciate your feedback on the specific tasks and projects I undertook, including the work I did on:
+2. **Store Setup**
+   - How do you configure a Redux store in a new React project?
+   - What are some best practices for structuring Redux state in a large application?
 
-Implementing close accounts functionality
-Developing the manage indicator feature
-Creating various modal interfaces
-Investigating and resolving the MCA URL launch issue
-Addressing the date of birth and time at address defect promptly
-Thank you all for taking the time to provide your feedback. Your insights will be incredibly helpful as I continue to develop and contribute to our team's success.
+3. **Reducers and Actions**
+   - How do you organize your reducers and actions in a Redux application?
+   - Can you explain the role of middleware in Redux and provide an example?
 
-Best regards,
-Darpan [Last Name]
+### JavaScript/TypeScript (JS/TS)
+1. **Prototype Inheritance**
+   - Can you explain how prototype inheritance works in JavaScript?
+   - What are symbols and how do they relate to object properties?
+
+2. **Array Methods**
+   - How do `map`, `filter`, and `reduce` work, and can you provide examples of when to use each?
+   - What's the difference between `slice` and `splice`?
+
+3. **Call/Apply**
+   - How do the `call` and `apply` methods work in JavaScript? Can you provide examples?
+
+4. **This Object and Scope**
+   - Can you explain the concept of `this` in JavaScript and how it differs in various contexts?
+   - How do arrow functions affect the scope of `this`?
+
+5. **Async Operations**
+   - How do you handle asynchronous operations in JavaScript? Compare callbacks, promises, and async/await.
+   - Can you provide an example of using `async/await` for an API call?
+
+6. **Security**
+   - What are CSRF and XSS attacks, and how can they be prevented in web applications?
+   - Can you discuss a Common Vulnerabilities and Exposures (CVE) you've encountered and how it was resolved?
+
+### HTML/CSS
+1. **Flexbox and Grid Layouts**
+   - Can you explain the differences between Flexbox and Grid in CSS and when you would use each?
+   - Provide an example of a layout you created using Flexbox.
+
+2. **Box Model and Box Sizing**
+   - How does the box model work in CSS?
+   - What is the difference between `content-box` and `border-box` for box-sizing?
+
+3. **CSS Preprocessors**
+   - What are the benefits of using CSS preprocessors like LESS or SASS?
+   - Can you provide an example of a project where you used a CSS preprocessor?
+
+These questions are designed to assess a candidate's understanding and practical knowledge of key concepts related to React, Redux, JavaScript/TypeScript, and HTML/CSS as noted in the provided documents.
