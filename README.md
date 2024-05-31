@@ -122,3 +122,16 @@
    - What are some common features of CSS preprocessors that you find most useful?
 
 These questions should help in evaluating the candidate's knowledge and expertise in the respective areas.
+
+
+### Feedback for Naveen
+
+It has been a pleasure working with Naveen in our feature team. As a front-end developer, he has demonstrated exceptional skills and dedication, particularly in recent projects such as the support needs feature, Tealium tagging, and the welcome email template. His continuous involvement in design reviews and his proficiency in demoing work have significantly contributed to our team's success.
+
+Naveen's work on critical pages like contact details, QBA, and various API integrations and enhancements showcased his technical prowess and ability to deliver features independently. His leadership qualities and excellent communication skills have been invaluable assets to the team.
+
+Naveen’s ability to manage and execute tasks efficiently while maintaining high-quality standards has made a lasting impact. We will miss his contributions and the positive energy he brings to the team. I look forward to catching up with him soon and wish him all the best in his future endeavors.
+
+### Farewell Note
+
+Naveen, you will be greatly missed. Your contributions have been invaluable. Working with you has been a pleasure, both professionally and personally. Best wishes for your future endeavors! Looking forward to catching up soon.
