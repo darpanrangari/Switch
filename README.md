@@ -1,137 +1,340 @@
-### React
-1. **Lifecycle Methods and Flow**
-   - Can you describe the React component lifecycle and explain the purpose of each lifecycle method?
-   - How would you use the `componentDidMount` lifecycle method in a class component?
-   - What are the differences between `shouldComponentUpdate` and `componentDidUpdate`?
-   - How do you manage side effects in functional components using hooks?
-   - Can you provide an example where `componentWillUnmount` is useful?
+### JavaScript Fundamentals
 
-2. **Styled Components**
-   - What are Styled Components and how do they differ from traditional CSS?
-   - How can you create a theme using Styled Components?
-   - Explain how to use props to dynamically change styles in Styled Components.
-   - What are some advantages and disadvantages of using Styled Components?
-   - Can you show an example of nesting styles using Styled Components?
+2. **What are closures in JavaScript, and how do they work? Provide an example.**
+   - **Answer:** A closure is a function that retains access to its lexical scope, even when the function is executed outside that scope. Closures are created whenever a function is created within another function. They allow for encapsulation and data privacy.
 
-3. **Hooks**
-   - What are React hooks and why were they introduced?
-   - How does the `useState` hook work? Provide an example.
-   - Explain the `useEffect` hook and its common use cases.
-   - What is the difference between `useMemo` and `useCallback`?
-   - How do you create a custom hook? Provide a use case for it.
+     **Example:**
+     ```javascript
+     function outerFunction() {
+       let outerVariable = 'I am from outer scope';
 
-4. **Accessibility**
-   - Why is accessibility important in web development?
-   - What tools or techniques do you use to test accessibility in React applications?
-   - How do you implement ARIA roles and attributes in a React component?
-   - Can you provide an example of making a form accessible?
-   - How do you handle keyboard navigation in a React application?
+       function innerFunction() {
+         console.log(outerVariable); // Has access to outerVariable
+       }
 
-5. **Performance Optimization**
-   - What are some common performance issues in React applications and how do you address them?
-   - How do you use React's `memo` function to optimize performance?
-   - What is code splitting and how does it improve performance in a React application?
-   - Explain the concept of virtualization in React and when you would use it.
-   - How can you optimize re-renders in a React component?
+       return innerFunction;
+     }
 
-### Redux
-1. **Redux Saga**
-   - What is Redux Saga and how does it help in managing side effects?
-   - How do you set up a simple Redux Saga to handle an API call?
-   - What are the differences between `takeEvery` and `takeLatest` in Redux Saga?
-   - How do you test a Redux Saga?
-   - Can you provide an example of using `put` and `call` effects in a Redux Saga?
+     const closure = outerFunction();
+     closure(); // Logs 'I am from outer scope'
+     ```
 
-2. **Store Setup**
-   - How do you configure a Redux store in a new React application?
-   - What are the roles of `createStore`, `combineReducers`, and `applyMiddleware` in Redux?
-   - How do you integrate Redux DevTools in a Redux setup?
-   - Explain the concept of middleware in Redux and provide an example of custom middleware.
-   - How do you persist Redux state across page reloads?
+3. **Describe the event loop and how it works. Why is it important in JavaScript?**
+   - **Answer:** The event loop is a mechanism that allows JavaScript to perform non-blocking asynchronous operations despite being single-threaded. It works by continuously checking the call stack and the task queue. When the call stack is empty, the event loop picks the first task from the queue and pushes it to the call stack for execution. This process is crucial for handling asynchronous operations, such as I/O tasks, without freezing the main thread.
 
-3. **Reducers and Actions**
-   - How do you structure your actions and reducers in a large Redux application?
-   - What is the purpose of action creators in Redux?
-   - How do you handle asynchronous actions in Redux?
-   - Explain how you would manage state normalization in Redux.
-   - How do you test Redux actions and reducers?
+4. **Explain the concept of prototypal inheritance. How is it different from classical inheritance?**
+   - **Answer:** Prototypal inheritance in JavaScript is a method by which objects inherit properties and methods from other objects. Instead of inheriting from classes (as in classical inheritance), JavaScript objects can directly inherit from other objects using the prototype chain.
 
-### JavaScript/TypeScript (JS/TS)
-1. **Prototype Inheritance**
-   - Can you explain how prototype inheritance works in JavaScript?
-   - How do you create an object that inherits from another object in JavaScript?
-   - What are the differences between classical inheritance and prototypal inheritance?
-   - How do you use the `Object.create` method?
-   - Can you provide an example of using symbols in JavaScript?
+     **Example:**
+     ```javascript
+     const parent = {
+       greet() {
+         console.log('Hello from parent');
+       }
+     };
 
-2. **Array Methods**
-   - How do `map`, `filter`, and `reduce` methods work in JavaScript? Provide examples for each.
-   - What are the differences between `slice` and `splice` methods?
-   - How does the `concat` method work and when would you use it?
-   - How do you use the `find` and `findIndex` methods?
-   - Explain how the `every` and `some` methods work and provide use cases.
+     const child = Object.create(parent);
+     child.greet(); // Logs 'Hello from parent'
+     ```
 
-3. **Call/Apply**
-   - How do the `call` and `apply` methods differ? Provide examples.
-   - What are some scenarios where using `call` or `apply` would be beneficial?
-   - How do you use the `bind` method in JavaScript?
-   - Explain the concept of function borrowing with `call` and `apply`.
-   - Can you demonstrate how to use `call` and `apply` with variadic functions?
+     **Difference:** Classical inheritance involves classes inheriting from other classes, often forming a hierarchical structure. Prototypal inheritance is more flexible, allowing objects to inherit directly from other objects without the need for classes.
 
-4. **This Object and Scope**
-   - How does the `this` keyword work in JavaScript and how is it determined?
-   - What are the differences between the `this` keyword in arrow functions versus regular functions?
-   - How do you use `bind` to set the value of `this` in a function?
-   - Can you provide an example of scope chaining in JavaScript?
-   - Explain the concept of closures and how they relate to scope.
+5. **What are Promises, and how do they compare to callbacks?**
+   - **Answer:** Promises are objects representing the eventual completion or failure of an asynchronous operation. They provide a more elegant way to handle asynchronous operations compared to callbacks, reducing callback hell and improving code readability.
 
-5. **Async Operations**
-   - What are the differences between callbacks, promises, and async/await in handling asynchronous operations?
-   - How do you handle errors in asynchronous code with promises and async/await?
-   - Can you demonstrate how to chain promises in JavaScript?
-   - How do you use `Promise.all` and what are its use cases?
-   - Explain how you would handle asynchronous operations in a React component.
+     **Comparison:**
+     - **Callbacks:** Functions passed as arguments to be executed once an asynchronous operation is complete. They can lead to nested structures and hard-to-read code.
+     - **Promises:** Provide `.then()`, `.catch()`, and `.finally()` methods to handle asynchronous operations in a more linear and readable manner.
 
-6. **Security**
-   - What are CSRF and XSS attacks, and how can they be prevented in web applications?
-   - How do you handle security vulnerabilities in JavaScript applications?
-   - What is CORS and how do you implement it?
-   - Can you explain the difference between `null` and `undefined`?
-   - What are some common security practices you follow when developing web applications?
+     **Example using Promise:**
+     ```javascript
+     fetch('https://api.example.com/data')
+       .then(response => response.json())
+       .then(data => console.log(data))
+       .catch(error => console.error('Error:', error));
+     ```
 
-### HTML/CSS
-1. **Flexbox and Grid Layouts**
-   - Can you explain the difference between Flexbox and Grid in CSS and provide examples of when to use each?
-   - How do you create a responsive layout using Flexbox?
-   - Can you provide an example of a complex layout using CSS Grid?
-   - What are some common issues you face when using Flexbox and how do you resolve them?
-   - How do you handle browser compatibility when using Flexbox and Grid?
+### Advanced Concepts
 
-2. **Box Model and Box Sizing**
-   - What is the CSS box model and how does it affect layout?
-   - How does the `box-sizing` property work and what are the differences between `content-box` and `border-box`?
-   - Can you provide an example of using the box model to create a specific layout?
-   - How do margins, padding, and borders affect the size and position of elements in the box model?
-   - What are some common issues related to the box model and how do you troubleshoot them?
+6. **How do you handle asynchronous operations in JavaScript? Discuss Promises, async/await, and other methods.**
+   - **Answer:** Asynchronous operations in JavaScript can be handled using:
+     - **Callbacks:** Functions that execute after an asynchronous operation completes.
+     - **Promises:** Objects that represent the eventual result of an asynchronous operation, providing methods like `.then()`, `.catch()`, and `.finally()`.
+     - **Async/Await:** Syntactic sugar built on top of Promises, making asynchronous code look synchronous. `async` functions return a Promise, and `await` pauses execution until the Promise is resolved or rejected.
 
-3. **CSS Preprocessors**
-   - What are the benefits of using CSS preprocessors like LESS or SASS?
-   - How do you set up a project to use a CSS preprocessor?
-   - Can you provide examples of using variables and mixins in SASS?
-   - How do you manage and organize large CSS files using preprocessors?
-   - What are some common features of CSS preprocessors that you find most useful?
+     **Example using async/await:**
+     ```javascript
+     async function fetchData() {
+       try {
+         const response = await fetch('https://api.example.com/data');
+         const data = await response.json();
+         console.log(data);
+       } catch (error) {
+         console.error('Error:', error);
+       }
+     }
 
-These questions should help in evaluating the candidate's knowledge and expertise in the respective areas.
+     fetchData();
+     ```
 
+7. **What are higher-order functions? Provide examples of their use in JavaScript.**
+   - **Answer:** Higher-order functions are functions that take other functions as arguments, return functions, or both. They are a key aspect of functional programming.
 
-### Feedback for Naveen
+     **Examples:**
+     - **`map()`:** Applies a function to each element of an array and returns a new array.
+       ```javascript
+       const numbers = [1, 2, 3];
+       const doubled = numbers.map(num => num * 2);
+       console.log(doubled); // [2, 4, 6]
+       ```
 
-It has been a pleasure working with Naveen in our feature team. As a front-end developer, he has demonstrated exceptional skills and dedication, particularly in recent projects such as the support needs feature, Tealium tagging, and the welcome email template. His continuous involvement in design reviews and his proficiency in demoing work have significantly contributed to our team's success.
+     - **`filter()`:** Returns a new array containing elements that pass a test.
+       ```javascript
+       const numbers = [1, 2, 3, 4];
+       const evens = numbers.filter(num => num % 2 === 0);
+       console.log(evens); // [2, 4]
+       ```
 
-Naveen's work on critical pages like contact details, QBA, and various API integrations and enhancements showcased his technical prowess and ability to deliver features independently. His leadership qualities and excellent communication skills have been invaluable assets to the team.
+8. **Explain the concept of currying in JavaScript. Why is it useful?**
+   - **Answer:** Currying is the process of transforming a function with multiple arguments into a sequence of functions, each taking a single argument. It allows for partial application, where some arguments are fixed, and the rest are provided later.
 
-Naveen’s ability to manage and execute tasks efficiently while maintaining high-quality standards has made a lasting impact. We will miss his contributions and the positive energy he brings to the team. I look forward to catching up with him soon and wish him all the best in his future endeavors.
+     **Example:**
+     ```javascript
+     function add(a) {
+       return function(b) {
+         return a + b;
+       };
+     }
 
-### Farewell Note
+     const addFive = add(5);
+     console.log(addFive(3)); // 8
+     ```
 
-Naveen, you will be greatly missed. Your contributions have been invaluable. Working with you has been a pleasure, both professionally and personally. Best wishes for your future endeavors! Looking forward to catching up soon.
+     **Usefulness:** Currying enables function reuse and modular code, making it easier to create specific functions from generic ones.
+
+9. **Describe the module pattern in JavaScript. How does it compare to ES6 modules?**
+   - **Answer:** The module pattern is a design pattern used to encapsulate private data and expose only the desired methods and properties. It often uses IIFEs (Immediately Invoked Function Expressions).
+
+     **Example:**
+     ```javascript
+     const myModule = (function() {
+       const privateVariable = 'I am private';
+
+       function privateMethod() {
+         console.log(privateVariable);
+       }
+
+       return {
+         publicMethod: function() {
+           privateMethod();
+         }
+       };
+     })();
+
+     myModule.publicMethod(); // Logs 'I am private'
+     ```
+
+     **ES6 Modules:** Introduced in ES6, providing a built-in module system with `import` and `export` statements, offering better syntax and static analysis.
+
+     **Example:**
+     ```javascript
+     // myModule.js
+     const privateVariable = 'I am private';
+
+     function privateMethod() {
+       console.log(privateVariable);
+     }
+
+     export function publicMethod() {
+       privateMethod();
+     }
+
+     // main.js
+     import { publicMethod } from './myModule.js';
+     publicMethod(); // Logs 'I am private'
+     ```
+
+10. **What are generators, and how do they differ from regular functions? Provide a use case.**
+    - **Answer:** Generators are functions that can pause and resume execution, maintaining their state between pauses. They are defined using the `function*` syntax and use the `yield` keyword to yield values.
+
+      **Example:**
+      ```javascript
+      function* generatorFunction() {
+        yield 1;
+        yield 2;
+        yield 3;
+      }
+
+      const gen = generatorFunction();
+      console.log(gen.next().value); // 1
+      console.log(gen.next().value); // 2
+      console.log(gen.next().value); // 3
+      ```
+
+      **Use Case:** Generators are useful for implementing iterators, handling asynchronous operations, and managing state in complex workflows.
+
+### Performance and Optimization
+
+11. **What are some techniques for optimizing JavaScript performance?**
+    - **Answer:**
+      - **Minimize DOM Manipulations:** Batch updates and use DocumentFragment.
+      - **Debounce and Throttle:** Control the rate of function executions.
+      - **Use Efficient Data Structures:** Prefer arrays and objects over complex structures.
+      - **Lazy Loading:** Load resources only when needed.
+      - **Memory Management:** Avoid memory leaks by properly clearing references.
+      - **Optimize Loops:** Use efficient looping constructs and avoid unnecessary computations.
+
+12. **How does garbage collection work in JavaScript? What are some best practices to ensure efficient memory management?**
+    - **Answer:** Garbage collection in JavaScript automatically frees up memory by removing objects that are no longer reachable or used. The most common algorithm is Mark-and-Sweep, which marks objects reachable from the root and sweeps away the rest.
+
+      **Best Practices:**
+      - **Avoid Global Variables:** Minimize their usage to reduce memory leaks.
+      - **Clear References:** Nullify references to objects when they are no longer needed.
+      - **Use WeakMap and WeakSet:** For storing objects without preventing their garbage collection.
+      - **Optimize Closures:** Ensure closures do not unnecessarily hold onto large objects.
+
+13. **Explain the concept of debouncing and throttling. When would you use each?**
+    - **Answer:**
+      - **Debouncing:** Ensures a function is only called once after a specified delay. Useful for events that trigger frequently, like window resizing or keypress events.
+        ```javascript
+        function debounce(func, delay) {
+          let timeout;
+          return function(...args) {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => func.apply(this, args), delay);
+          };
+        }
+        ```
+      - **Throttling:** Ensures a function is called at most once in a specified interval. Useful for rate-limiting events like scrolling or mouse movements.
+        ```javascript
+        function throttle(func, limit) {
+          let lastFunc;
+          let lastRan;
+          return function(...args) {
+            if (!lastRan) {
+              func
+
+.apply(this, args);
+              lastRan = Date.now();
+            } else {
+              clearTimeout(lastFunc);
+              lastFunc = setTimeout(() => {
+                if (Date.now() - lastRan >= limit) {
+                  func.apply(this, args);
+                  lastRan = Date.now();
+                }
+              }, limit - (Date.now() - lastRan));
+            }
+          };
+        }
+        ```
+
+14. **What is event delegation, and how does it improve performance in JavaScript applications?**
+    - **Answer:** Event delegation leverages event bubbling to handle events at a higher level in the DOM rather than setting event listeners on multiple child elements. By attaching a single event listener to a parent element, you can manage all events for child elements.
+
+      **Example:**
+      ```javascript
+      document.getElementById('parent').addEventListener('click', function(event) {
+        if (event.target && event.target.matches('li')) {
+          console.log('List item clicked:', event.target.textContent);
+        }
+      });
+      ```
+
+      **Performance Improvement:** Reduces the number of event listeners, lowers memory usage, and simplifies code management.
+
+### Security
+
+21. **What are some common security issues in JavaScript applications, and how can they be mitigated?**
+    - **Answer:**
+      - **Cross-Site Scripting (XSS):** Sanitize user input, use Content Security Policy (CSP), and escape output.
+      - **Cross-Site Request Forgery (CSRF):** Use anti-CSRF tokens, validate origin headers, and enforce same-site cookies.
+      - **Insecure APIs:** Use HTTPS, validate and sanitize inputs, and implement proper authentication and authorization.
+      - **Data Exposure:** Avoid exposing sensitive data in the frontend, use encryption, and secure storage mechanisms.
+
+22. **Explain Cross-Site Scripting (XSS) and how to prevent it.**
+    - **Answer:** XSS is a security vulnerability where attackers inject malicious scripts into web pages viewed by other users. It can lead to session hijacking, data theft, and other malicious activities.
+
+      **Prevention:**
+      - **Input Validation and Sanitization:** Validate and sanitize user inputs to ensure they do not contain malicious scripts.
+      - **Output Encoding:** Encode data before rendering it in the browser to prevent script execution.
+      - **Content Security Policy (CSP):** Implement CSP to restrict sources of executable scripts.
+
+23. **What is Cross-Origin Resource Sharing (CORS), and why is it important?**
+    - **Answer:** CORS is a security feature implemented by browsers to prevent web pages from making requests to a different domain than the one that served the web page. It controls how resources on a server can be accessed by external domains.
+
+      **Importance:** CORS is crucial for preventing unauthorized access to resources and ensuring that only trusted domains can access sensitive data. It helps mitigate risks like Cross-Site Request Forgery (CSRF).
+
+### Miscellaneous
+
+24. **How does the `this` keyword work in JavaScript? Discuss different contexts in which `this` can be used.**
+    - **Answer:** The `this` keyword refers to the context in which a function is called. Its value varies depending on the context:
+      - **Global Context:** In the global scope, `this` refers to the global object (`window` in browsers).
+      - **Function Context:** In a regular function, `this` refers to the object that called the function. If not called by an object, it refers to the global object.
+      - **Object Method:** In an object method, `this` refers to the object owning the method.
+      - **Constructor Function:** In a constructor function, `this` refers to the newly created instance.
+      - **Arrow Functions:** Arrow functions do not have their own `this` context; they inherit `this` from the parent scope.
+
+26. **Explain the concept of polyfills. When and why would you use them?**
+    - **Answer:** Polyfills are code snippets or libraries that provide modern functionality on older browsers that do not natively support it. They allow developers to use new features without worrying about compatibility issues.
+
+      **Use Cases:** When developing applications that need to support older browsers or environments that lack support for modern JavaScript features.
+
+      **Example:**
+      ```javascript
+      // Polyfill for Array.prototype.includes
+      if (!Array.prototype.includes) {
+        Array.prototype.includes = function(value) {
+          return this.indexOf(value) !== -1;
+        };
+      }
+      ```
+
+27. **What are web workers, and how do they improve the performance of JavaScript applications?**
+    - **Answer:** Web workers are scripts that run in the background, separate from the main execution thread of a web application. They allow for concurrent execution, enabling intensive tasks to be performed without blocking the main thread.
+
+      **Benefits:** Improved performance and responsiveness, as long-running tasks (e.g., data processing, computations) can be offloaded to web workers.
+
+      **Example:**
+      ```javascript
+      const worker = new Worker('worker.js');
+      worker.postMessage('Start processing');
+
+      worker.onmessage = function(event) {
+        console.log('Worker result:', event.data);
+      };
+      ```
+
+28. **Discuss the difference between deep and shallow copying. How can you achieve each in JavaScript?**
+    - **Answer:** 
+      - **Shallow Copy:** Copies only the immediate properties of an object. Changes to nested objects affect both copies.
+        ```javascript
+        const original = { a: 1, b: { c: 2 } };
+        const shallowCopy = Object.assign({}, original);
+        shallowCopy.b.c = 3;
+        console.log(original.b.c); // 3
+        ```
+
+      - **Deep Copy:** Recursively copies all properties, ensuring complete independence of the original and the copy.
+        ```javascript
+        const original = { a: 1, b: { c: 2 } };
+        const deepCopy = JSON.parse(JSON.stringify(original));
+        deepCopy.b.c = 3;
+        console.log(original.b.c); // 2
+        ```
+
+### Practical Scenarios
+
+29. **How would you handle large datasets in a JavaScript application to ensure smooth performance?**
+    - **Answer:**
+      - **Pagination:** Load and display data in chunks rather than all at once.
+      - **Lazy Loading:** Load data as needed, based on user interaction or scrolling.
+      - **Virtualization:** Render only the visible portion of the data, dynamically loading and unloading elements.
+      - **Web Workers:** Offload intensive data processing to web workers to avoid blocking the main thread.
+      - **Efficient Data Structures:** Use appropriate data structures for storage and retrieval.
+
+30. **Describe a situation where you had to refactor JavaScript code for better readability or performance. What changes did you make, and what was the outcome?**
+    - **Answer:** 
+      - **Situation:** A legacy application had deeply nested callback functions, leading to callback hell and poor readability.
+      - **Changes Made:** Refactored the code to use Promises and async/await syntax. Extracted reusable logic into separate functions. Simplified complex conditions and loops.
+      - **Outcome:** Improved code readability and maintainability. Reduced the risk of errors and made the codebase easier to understand and extend. The application's performance also improved due to better handling of asynchronous operations.
